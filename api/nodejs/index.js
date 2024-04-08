@@ -16,12 +16,10 @@ app.get("/ping", (req, res) => {
 })
 
 app.get("/users", (req, res) => {
-    console.log(mockUsersDatabase)
     res.status(200).json(mockUsersDatabase)
 })
 
 app.post("/users", (req, res) => {
-    console.log(req.body)
     const { name, email } = req.body
     const newUser = {
         id: currentId,
@@ -36,6 +34,10 @@ app.post("/users", (req, res) => {
     res.status(200).json({message: `user ${name} created`})
 })
 
+// criar rota GET de users que retorne um usuario especifico.
+// criar rota PUT de users que altere o email de um usuario. 
+
+
 app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`)
+    console.log(`Server listening on port ${PORT} :)`) 
 })
