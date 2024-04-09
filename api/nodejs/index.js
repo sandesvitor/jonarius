@@ -37,7 +37,27 @@ app.post("/users", (req, res) => {
 // criar rota GET de users que retorne um usuario especifico.
 // criar rota PUT de users que altere o email de um usuario. 
 
+app.get("/users/:id", (req, res) => {
+    console.log(req);
+    const userId = parseInt(req.params.id)
+    const targetUser = mockUsersDatabase.find(user => user.id === userId)
+
+    // CODIGO ABAIXO IGUAL A LINHA 42:
+    // const jonas = listaDeDicionarios.find((user) => {
+    //     return user.name === "Helio"
+    // })
+    res.status(200).json(targetUser);
+
+    // if (user) {
+    //     res.status(200).json(user)
+    // } else {
+    //     res.status(404).json({ message: "User not found" })
+    // }
+})
+
+
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} :)`) 
 })
+
