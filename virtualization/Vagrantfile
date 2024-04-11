@@ -23,12 +23,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           v.customize ["modifyvm", :id, "--memory", 1024,"--cpus", 1]
           v.customize ["modifyvm", :id, "--name", machine[:hostname]]
         end
-        node.vm.provision :shell, privileged: true, inline: <<-SHELL
-          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-        SHELL
-
-        node.vm.synced_folder "./primeira-api", "/home/vagrant/primeira-api"
-
       end  
     end
 
