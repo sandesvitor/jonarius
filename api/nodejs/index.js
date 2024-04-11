@@ -98,6 +98,19 @@ app.put("/users/:id", (req, res) => {
    }
 })
 
+app.delete("/users/:id", (req, res) => {
+    const userId = parseInt(req.params.id);
+    const userIndex = mockUsersDatabase.findIndex(user => user.id === userId);
+    
+    if (userIndex !== -1) {
+        mockUsersDatabase.splice(userIndex, 1);
+        res.status(200).json({message: `user ${userId} deleted`}); 
+    }
+    else{
+    res.status(404).json({message: `user not found`});
+    }
+})
+
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} :)`) 
