@@ -34,13 +34,12 @@ app.post("/users", (req, res) => {
     res.status(200).json({message: `user ${name} created`})
 })
 
-// criar rota GET de users que retorne um usuario especifico.
-// criar rota PUT de users que altere o email de um usuario. 
-
 app.get("/users/:id", (req, res) => {
-    console.log(req);
     const userId = parseInt(req.params.id)
+    console.log("userId antes " + userId);
     const targetUser = mockUsersDatabase.find(user => user.id === userId)
+    console.log("targetUser" + targetUser);
+
 
     // CODIGO ABAIXO IGUAL A LINHA 42:
     // const jonas = listaDeDicionarios.find((user) => {
@@ -53,8 +52,51 @@ app.get("/users/:id", (req, res) => {
     // } else {
     //     res.status(404).json({ message: "User not found" })
     // }
+
+
+
+    
 })
 
+app.put("/users/:id", (req, res) => {
+    const userId = parseInt(req.params.id);
+    const { email } = req.body;
+    let isUserFound = false;
+
+    mockUsersDatabase.forEach(user => {
+        if(user.id === userId){
+            user.email = email;
+            isUserFound = true;
+        } 
+    });
+    // let counter = 0;
+
+    
+    // const targetUser = mockUsersDatabase.find(user => user.id === userId);
+
+    // const targetUser = mockUsersDatabase.find((user) => {
+    //    counter += 1;
+    
+        
+    //     return user.id === userId;
+    // });
+
+    
+    // if (!!targetUser == true) {
+    //     mockUsersDatabase[counter-1].email = email;
+    //     res.status(200).json({message: `user ${email} changed`}); 
+    // }
+    // else{
+    //     res.status(404).json({message: `não rolou meu pcro`});  
+    // }
+
+   if (isUserFound === true){
+    res.status(200).json({message: `user ${email} changed`});
+   }
+   else{
+    res.status(404).json({message: `não rolou meu pcro`});
+   }
+})
 
 
 app.listen(PORT, () => {
