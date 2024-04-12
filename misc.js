@@ -18,29 +18,53 @@
 
 // console.log(newList)
 
-const listaDeDicionarios = [
-    {id: 1, name: "Jonas"}, // key-value pair
-    {id: 2, name: "Vitor"},
-    {id: 3, name: "Helio"},
-]
+// const listaDeDicionarios = [
+//     {id: 1, name: "Jonas"}, // key-value pair
+//     {id: 2, name: "Vitor"},
+//     {id: 3, name: "Helio"},
+// ]
 
-const jonas = listaDeDicionarios.find((user) => {
-    return user.name === "Helio"
-})
+// const jonas = listaDeDicionarios.find((user) => {
+//     return user.name === "Helio"
+// })
 
-console.log(jonas)
+// console.log(jonas)
 
-const findCustom = (element) => {
-    if (element.id === 2){
-        return element
-    }
+// const findCustom = (element) => {
+//     if (element.id === 2){
+//         return element
+//     }
 
-    return undefined
-}
+//     return undefined
+// }
 
 
-for (let i = 0; i < listaDeDicionarios.length; i++){
-    let user = findCustom(listaDeDicionarios[i])
-    console.log(user)
-}
+// for (let i = 0; i < listaDeDicionarios.length; i++){
+//     let user = findCustom(listaDeDicionarios[i])
+//     console.log(user)
+// }
 
+
+
+
+// class Cachorro {
+//     constructor(){
+//         this.patas = 4;
+//         this.cabeca =1;
+//     }
+//     latir(){
+//         console.log("auauau");
+//     }
+
+// }
+
+
+// class CachorroQueFala extends Cachorro {
+//     constructor(){
+//         super();
+//     }
+//     latir(){
+//         console.log("oi meu pacero");
+//     }
+
+// }

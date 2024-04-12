@@ -1,11 +1,11 @@
 const express = require("express")
 const cors = require("cors")
 const app = express()
+const MockUsersDatabase = require("./src/db/index.js")
 
 const PORT = 8080
-let currentId = 1
 
-const mockUsersDatabase = []
+const DB = new MockUsersDatabase();
 
 app.use(cors())
 
@@ -16,98 +16,45 @@ app.get("/ping", (req, res) => {
 })
 
 app.get("/users", (req, res) => {
-    res.status(200).json(mockUsersDatabase)
+    res.status(200).json(DB.getUsers());
 })
 
 app.post("/users", (req, res) => {
-    const { name, email } = req.body
-    const newUser = {
-        id: currentId,
-        name: name,
-        email: email
-    }
-
-    currentId += 1
-
-    mockUsersDatabase.push(newUser)
-
+    const { name, email } = req.body;
+    DB.createUser(name,email);
     res.status(200).json({message: `user ${name} created`})
 })
 
 app.get("/users/:id", (req, res) => {
-    const userId = parseInt(req.params.id)
-    console.log("userId antes " + userId);
-    const targetUser = mockUsersDatabase.find(user => user.id === userId)
-    console.log("targetUser" + targetUser);
+    const userId = parseInt(req.params.id);
+    const targetUser = DB.getUserById(userId);
 
-
-    // CODIGO ABAIXO IGUAL A LINHA 42:
-    // const jonas = listaDeDicionarios.find((user) => {
-    //     return user.name === "Helio"
-    // })
     res.status(200).json(targetUser);
 
-    // if (user) {
-    //     res.status(200).json(user)
-    // } else {
-    //     res.status(404).json({ message: "User not found" })
-    // }
-
-
-
-    
 })
 
 app.put("/users/:id", (req, res) => {
     const userId = parseInt(req.params.id);
     const { email } = req.body;
-    let isUserFound = false;
-
-    mockUsersDatabase.forEach(user => {
-        if(user.id === userId){
-            user.email = email;
-            isUserFound = true;
-        } 
-    });
-    // let counter = 0;
-
+    const isUserFound = DB.updateEmailById(userId, email);
     
-    // const targetUser = mockUsersDatabase.find(user => user.id === userId);
-
-    // const targetUser = mockUsersDatabase.find((user) => {
-    //    counter += 1;
-    
-        
-    //     return user.id === userId;
-    // });
-
-    
-    // if (!!targetUser == true) {
-    //     mockUsersDatabase[counter-1].email = email;
-    //     res.status(200).json({message: `user ${email} changed`}); 
-    // }
-    // else{
-    //     res.status(404).json({message: `não rolou meu pcro`});  
-    // }
-
    if (isUserFound === true){
-    res.status(200).json({message: `user ${email} changed`});
+       res.status(200).json({message: `user ${email} changed`});
    }
    else{
-    res.status(404).json({message: `não rolou meu pcro`});
+       res.status(404).json({message: `não rolou meu pcro`});
    }
 })
 
 app.delete("/users/:id", (req, res) => {
     const userId = parseInt(req.params.id);
-    const userIndex = mockUsersDatabase.findIndex(user => user.id === userId);
+    const isUserFound = DB.deleteUserById(userId); 
     
-    if (userIndex !== -1) {
-        mockUsersDatabase.splice(userIndex, 1);
-        res.status(200).json({message: `user ${userId} deleted`}); 
+    if (isUserFound === true){
+        res.status(200).json({message: `user ${userId} deleted`});
     }
     else{
-    res.status(404).json({message: `user not found`});
+        res.status(404).json({message: `não rolou meu pcro`});
     }
 })
 
