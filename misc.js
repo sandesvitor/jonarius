@@ -1,22 +1,22 @@
-// const a = "Hello"
-// const b = 1
-// const c = 2.2342
-// const d = true
-// const e = [1,2,3]
-// const f = {message: "hello"}
+// // const a = "Hello"
+// // const b = 1
+// // const c = 2.2342
+// // const d = true
+// // const e = [1,2,3]
+// // const f = {message: "hello"}
 
-// console.log(typeof a)
-// console.log(typeof b)
-// console.log(typeof c)
-// console.log(typeof d)
-// console.log(typeof e)
-// console.log(typeof f)
+// // console.log(typeof a)
+// // console.log(typeof b)
+// // console.log(typeof c)
+// // console.log(typeof d)
+// // console.log(typeof e)
+// // console.log(typeof f)
 
-// const newList = e.forEach((element) => {
-//     console.log(element)
-// })
+// // const newList = e.forEach((element) => {
+// //     console.log(element)
+// // })
 
-// console.log(newList)
+// // console.log(newList)
 
 const listaDeDicionarios = [
     {id: 1, name: "Jonas"}, // key-value pair
@@ -24,23 +24,31 @@ const listaDeDicionarios = [
     {id: 3, name: "Helio"},
 ]
 
-const jonas = listaDeDicionarios.find((user) => {
-    return user.name === "Helio"
-})
-
-console.log(jonas)
-
-const findCustom = (element) => {
-    if (element.id === 2){
-        return element
-    }
-
-    return undefined
+console.log(listaDeDicionarios)
+let index = listaDeDicionarios.findIndex(x => x.id === 2)
+if (index !== -1) {
+    listaDeDicionarios.splice(index, 1);
 }
+console.log(listaDeDicionarios)
 
 
-for (let i = 0; i < listaDeDicionarios.length; i++){
-    let user = findCustom(listaDeDicionarios[i])
-    console.log(user)
-}
+// const jonas = listaDeDicionarios.find((user) => {
+//     return user.name === "Helio"
+// })
+
+// console.log(jonas)
+
+// const findCustom = (element) => {
+//     if (element.id === 2){
+//         return element
+//     }
+
+//     return undefined
+// }
+
+
+// for (let i = 0; i < listaDeDicionarios.length; i++){
+//     let user = findCustom(listaDeDicionarios[i])
+//     console.log(user)
+// }
 
