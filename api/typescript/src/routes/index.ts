@@ -1,7 +1,7 @@
 import { Router, Request, Response } from 'express';
-import MockDatabaseAbstract from "../db-abstract-class"
+import MockDatabase from "../db-interface"
 
-const DB: MockDatabaseAbstract = new MockDatabaseAbstract() 
+const DB: MockDatabase = new MockDatabase() 
 
 const route = Router()
 
