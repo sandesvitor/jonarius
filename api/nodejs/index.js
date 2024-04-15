@@ -12,21 +12,25 @@ app.use(cors())
 app.use(express.json());
 
 app.get("/ping", (req, res) => {
+    console.log(`[GET /ping]`)
     res.status(200).json({message: "pong"})
 })
 
 app.get("/users", (req, res) => {
+    console.log(`[GET /users]`)
     res.status(200).json(DB.getUsers());
 })
 
 app.post("/users", (req, res) => {
     const { name, email } = req.body;
+    console.log(`[POST /users]`)
     DB.createUser(name,email);
     res.status(200).json({message: `user ${name} created`})
 })
 
 app.get("/users/:id", (req, res) => {
     const userId = parseInt(req.params.id);
+    console.log(`[GET /users/${userId}]`)
     const targetUser = DB.getUserById(userId);
 
     res.status(200).json(targetUser);
@@ -35,6 +39,7 @@ app.get("/users/:id", (req, res) => {
 
 app.put("/users/:id", (req, res) => {
     const userId = parseInt(req.params.id);
+    console.log(`[PUT /users/${userId}]`)
     const { email } = req.body;
     const isUserFound = DB.updateEmailById(userId, email);
     
@@ -48,6 +53,7 @@ app.put("/users/:id", (req, res) => {
 
 app.delete("/users/:id", (req, res) => {
     const userId = parseInt(req.params.id);
+    console.log(`[DELETE /users/${userId}`)
     const isUserFound = DB.deleteUserById(userId); 
     
     if (isUserFound === true){

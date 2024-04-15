@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style/links.css" media="screen" />
+    <title>API</title>    
+</head>
+<body>
+    <header>
+        <div>
+            <h1>First API</h1>
+            <h3>Interact with your first NodeJS API =)</h3>
+        </div>
+    </header>
+    
+    <section id="main">
+        <h2 class="section-title"><i>User List!</i></h2>
+        <div id="users-container"></div>
+        <button id="openPopup">Add New User</button>
+    </section>
+
+    <!-- Popup HTML -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Name">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Email">
+            </div>
+            <button id="submitUser">Submit</button>
+        </div>
+    </div>
+    
+    <footer>
+        <a href="../index.html">Back</a>
+    </footer>
+
+    <script src="../scripts/post-user.js"></script>
+    <script src="../scripts/list-users.js"></script>
+</body>
+</html>
