@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Use a linear gradient for the background */
+    background: linear-gradient(to bottom, rgb(18, 18, 18), rgb(204, 203, 203));
+    color: #fff;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgb(18, 18, 18);
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+header h3 {
+    margin-top: 40px;
+}
+
+section {
+    flex: 1; /* Allow section to take up remaining space */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+button {
+    color: #fff;
+    background-color: rgb(72, 72, 82);
+    width: 200px;
+    height: 70px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+footer {
+    background-color: rgb(204, 203, 203);
+    padding: 20px;
+    text-align: center;
+}
+
