@@ -35,7 +35,7 @@ section {
     font-size: large;
 }
 
-button .exercise {
+.exercise {
     color: #fff;
     background-color: rgb(72, 72, 82);
     width: 200px;
