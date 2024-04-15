@@ -2,7 +2,7 @@
 
 Repositório centralizado de estudo de programaçao para o meu brother Jonas Murad :heart:
 
-![Jonas 1](./img/jonas2.jpg)
+![Jonas 1](./img/jonas.jpg)
 
 ## Como utilizar
 
