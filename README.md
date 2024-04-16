@@ -32,3 +32,4 @@ Assunto   | Linguagem   | Descrição | Dependências | Concluído |
 - [Udemy - Entendendo TypeScript](https://www.udemy.com/share/101zx23@yXt0EZKkPHKvJhFpi6V24dp5zhqlrY04t2So21zgVQvtBO3aCG1WoxP9um4tTMoC/)
 - [Udemy - Curso Web Moderno Completo com JavaScript + Projetos](https://www.udemy.com/share/101qTY3@jf1wrG7Ppap2kunfE4t8WMbKKimFxtYucdu9A1gpy9xBFvF3xT9xZGKZRqLpoIpz/)
 - [Udemy - Python 3 - Curso Completo do Básico ao Avançado](https://www.udemy.com/share/101uPO3@uvn5izKGwHFyQZ9nMI_87yJKR86jwF8MQpTockhesSiF80vuMqwE7_1y-5tXVASe/)
+- [JavaScript Visualized - Event Loop, Web APIs, (Micro)task Queue](https://www.youtube.com/watch?v=eiC58R16hb8&t=23s)
