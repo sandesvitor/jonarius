@@ -1,4 +1,4 @@
-# Jonarius!
+# Jonarius
 
 Repositório centralizado de estudo de programação para o meu brother Jonas Murad :heart:
 
