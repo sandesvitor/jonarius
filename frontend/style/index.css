@@ -1,99 +1,109 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    overflow-x: hidden;
-    flex-flow: column wrap;
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    background-color: #e7ebf3;
+  margin: 0;
+  display: flex;
+  overflow-x: hidden;
+  flex-flow: column wrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #e7ebf3;
+  min-height: 100vh;
+  width: 100vw;
 }
 
-
 a {
-    all: unset;
+  all: unset;
 }
 
 header {
-    background-color: #020c26;
-    color: rgb(199, 194, 194);
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 75px;
-    background-image: url('../assets/bg.jpg');
+  background-color: #020c26;
+  color: rgb(199, 194, 194);
+  position: relative;
+  width: 100vw;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 75px;
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 section {
-    background: rgb(18, 18, 18);
-    background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(74, 77, 78, 1) 100%, rgba(140, 138, 138, 1) 100%);
-    color: #fff;
-    /* background-color: #e8eaee; */
-    color: rgb(34, 34, 34);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
+  background: rgb(18, 18, 18);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 18, 18, 1) 0%,
+    rgba(74, 77, 78, 1) 100%,
+    rgba(140, 138, 138, 1) 100%
+  );
+  color: #fff;
+  /* background-color: #e8eaee; */
+  color: rgb(34, 34, 34);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  flex-grow: 1;
 }
 
 .down {
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    border-left: 20px solid transparent;
-    /* Half of the width */
-    border-right: 20px solid transparent;
-    /* Half of the width */
-    border-top: 30px solid #fff;
-    /* Height of the arrow */
-    margin-top: 10px;
-    transition: transform 0.8s;
-    /* Define transition */
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  /* Half of the width */
+  border-right: 20px solid transparent;
+  /* Half of the width */
+  border-top: 30px solid #fff;
+  /* Height of the arrow */
+  margin-top: 10px;
+  transition: transform 0.8s;
+  /* Define transition */
 }
 
 .down:hover {
-    transition: 0.8s;
-    transform: translateY(10px);
-    /* Move the arrow down on hover */
+  transition: 0.8s;
+  transform: translateY(10px);
+  /* Move the arrow down on hover */
 }
 
 .subject {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5%;
-    font-weight: 550;
-    border-top: 5px solid rgb(207, 54, 54);
-    height: 400px;
-    max-width: 100%;
-    width: 400px;
-    margin: 60px 40px;
-    -webkit-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.75);
-    color: blanchedalmond;
-    background-image: url(../assets/link-bg1.jpg);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+  font-weight: 550;
+  border-top: 5px solid rgb(207, 54, 54);
+  height: 400px;
+  max-width: 100%;
+  width: 400px;
+  margin: 60px 40px;
+  -webkit-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.75);
+  color: blanchedalmond;
+  background-image: url(../assets/link-bg1.jpg);
 }
 
 .subject:hover {
-    transition: 0.5s;
-    transform: translateY(-6px)
+  transition: 0.5s;
+  transform: translateY(-6px);
 }
