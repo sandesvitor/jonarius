@@ -23,9 +23,10 @@ jonarius
 Assunto   | Linguagem   | Descrição | Dependências | Concluído |
 --------- | ----------- | --------- | ------------ | --------- |
 `REST API` | `javascript`| Fazer rota PUT e DELETE em /users/:id | `nodejs`, `npm` | :white_check_mark:
-`REST API, documentação ` | `markdown`| Escrever documentação (arquivo README.md) na pasta [`backend/nodejs`](./backend/nodejs/) (pesquisar sobre boas práticas de documentação de API, sem entrar no mérito de swagger ou coisa do tipo, apenas o README) | `-` |
-`REST API, Promises` | `javascript`| Criar uma rota GET "/pokemon" na api que acesse a API externa do pokemon e retorne qualquer informação que você quiser (como por exemplo `https://pokeapi.co/api/v2/pokemon/pikachu`) | [`extension`](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser) |
+`DOCUMENTAÇÃO ` | `markdown`| Escrever documentação (arquivo README.md) na pasta [`backend/nodejs`](./backend/nodejs/) (pesquisar sobre boas práticas de documentação de API, sem entrar no mérito de swagger ou coisa do tipo, apenas o README) | `-` |
+`REST API`, `PROMISES` | `javascript`| Criar uma rota GET "/pokemon" na api que acesse a API externa do pokemon e retorne qualquer informação que você quiser (como por exemplo `https://pokeapi.co/api/v2/pokemon/pikachu`) | [`extension`](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser) |
 `REST API` | `python`| Reescrever a API REST em Python utilizando o Web Framework Flask, como definido em [`api/python`](./api/python/) | `python3`, `pip3`, `pipenv`
+`DOCUMENTAÇÃO` | `markdown`| Escrever uma documentação resumindo nossas aulas, tanto no que tange Javascript e outras linguagens de programação, WEB (APIs RESTfull, métodos HTTP, frontend e backend, etc) e também conceitos fundamentais de ciências da computação (processos, *threads*, estrutura de dados, *runtime*, *compile time*, componentes da memória, Stack e Heap, etc...) | `-` |
 
 ## Material Relevante
 
