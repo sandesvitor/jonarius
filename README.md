@@ -11,14 +11,11 @@ A princípio o repositório tem apenas duas pasta efetivas: [`api/nodejs`](./api
 Árvore do repositório:
 
 ```shell
-.
+jonarius
 ├── api
-├── data-structures
-├── docker
 ├── frontend
 ├── img
-├── README.md
-└── virtualization
+└── README.md
 ```
 
 ## Dever de Casa =)
