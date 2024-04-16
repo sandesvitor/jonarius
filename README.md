@@ -23,7 +23,7 @@ A princípio o repositório tem apenas duas pasta efetivas: [`api/nodejs`](./api
 
 ## Dever de Casa =)
 
-1. Fazer rota PUT e DELETE em /user :white_check_mark:
-2. Criar uma rota GET "/pokemon" na api que acesse a API externa do pokemon e retorne qualquer informação que você quiser (como por exemplo `https://pokeapi.co/api/v2/pokemon/pikachu`)  :white_check_mark:
- 
-
+Assunto   | Linguagem   | Descrição | Concluído
+--------- | ----------- | --------- | ---------
+`Api`     | `javascript`| Fazer rota PUT e DELETE em /user | :white_check_mark:
+`Api/Promise` | `javascript`| Criar uma rota GET "/pokemon" na api que acesse a API externa do pokemon e retorne qualquer informação que você quiser (como por exemplo `https://pokeapi.co/api/v2/pokemon/pikachu`) |
