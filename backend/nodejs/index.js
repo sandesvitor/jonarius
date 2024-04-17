@@ -1,19 +1,35 @@
-const express = require("express")
-const cors = require("cors")
-const app = express()
-const MockUsersDatabase = require("./src/db/index.js")
+const express = require("express");
+const cors = require("cors");
+const app = express();
+const axios = require(`axios`);
+const MockUsersDatabase = require("./src/db/index.js");
 
-const PORT = 8080
+const PORT = 8080;
 
 const DB = new MockUsersDatabase();
 
-app.use(cors())
+app.use(cors());
 
 app.use(express.json());
 
 app.get("/ping", (req, res) => {
     console.log(`[GET /ping]`)
     res.status(200).json({message: "pong"})
+})
+
+app.get("/proxy", async (req, res) => {
+    const URL = `http://localhost:8081`;
+    const info = await axios.get(URL);
+
+    res.status(200).json(info.data);
+})
+
+app.get("/pokemon/:pokemonName", async (req, res) => {
+    const pokemonName = req.params.pokemonName;
+    const URL = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+    const pokemon =  await axios.get(URL);
+
+    res.status(200).json(pokemon.data);
 })
 
 app.get("/users", (req, res) => {
@@ -64,8 +80,6 @@ app.delete("/users/:id", (req, res) => {
     }
 })
 
-
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} :)`) 
 })
-
