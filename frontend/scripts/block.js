@@ -44,7 +44,12 @@ button3.addEventListener("click", () => {
 
 button4.addEventListener("click", async () => {
     console.log("Fazendo uma requisição GET na API para retornar um insulto:")
-    const insult = await fetch("https://insult.mattbas.org/api/insult").then(res => res.text())
+    const insult = await fetch("https://insult.mattbas.org/api/insult")
+        .then(res => res.text())
+        .then(res => res.toUpperCase())
+        .catch(err => {
+            console.log(err.message)
+        })
 
     let resultBlock = document.createElement("h1")
     resultBlock.innerHTML = insult

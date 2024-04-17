@@ -36,15 +36,15 @@
     * 
 */ 
 
-function slowProcessMock(){
-    setTimeout(() => {
-        console.log("=)")
-    }, 5000)
-}
+// function slowProcessMock(){
+//     setTimeout(() => {
+//         console.log("=)")
+//     }, 5000)
+// }
 
-console.log("Started")
-slowProcessMock()
-console.log("Finished")
+// console.log("Started")
+// slowProcessMock()
+// console.log("Finished")
 
 /*
     *
