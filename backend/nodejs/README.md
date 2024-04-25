@@ -18,12 +18,12 @@ API
 
 Request | URL | o que faz | comentários |
 --------|-----|-----------|-------------|
-POST|http://localhost:8080/users|Adiciona o usuário baseado nas informações "name" e "e-mail" inseridas no body| necessária a nomenclatura correta """name": $nome" e o mesmo para e-mail|
-GET|http://localhost:8080/users|Checa a lista de usuários mostrando todos já cadastrados até o momento| Lista mostrada em ordem de cadastro|
-GET|http://localhost:8080/users/$numero|Busca um usário baseado na "id" dele e retorna suas informações|id definida em ordem progressiva de cadastro|
-PUT|http://localhost:8080/users/$numero|Muda o e-mail de um usuário específico baseado na "id" dele|Caso a id não exista volta uma mensagem de erro|
-DEL|http://localhost:8080/users/$numero|Exclui o usuário baseado na "id" dele|Caso a id não exista volta uma mensagem de erro|
-GET|http://localhost:8080/pokemon/$nomeDoPokemon|Busca o pokemon pelo nome e retorna informações sobre ele|Função extra inserida como estudo usando a https://pokeapi.co/|
+`POST`|http://localhost:8080/users|Adiciona o usuário baseado nas informações "name" e "e-mail" inseridas no body| necessária a nomenclatura correta """name": $nome" e o mesmo para e-mail|
+`GET`|http://localhost:8080/users|Checa a lista de usuários mostrando todos já cadastrados até o momento| Lista mostrada em ordem de cadastro|
+`GET`|http://localhost:8080/users/$numero|Busca um usário baseado na "id" dele e retorna suas informações|id definida em ordem progressiva de cadastro|
+`PUT`|http://localhost:8080/users/$numero|Muda o e-mail de um usuário específico baseado na "id" dele|Caso a id não exista volta uma mensagem de erro|
+`DEL`|http://localhost:8080/users/$numero|Exclui o usuário baseado na "id" dele|Caso a id não exista volta uma mensagem de erro|
+`GET`|http://localhost:8080/pokemon/$nomeDoPokemon|Busca o pokemon pelo nome e retorna informações sobre ele|Função extra inserida como estudo usando a https://pokeapi.co/|
 
 ## LIBRARIES USADAS
 
