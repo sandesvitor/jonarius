@@ -6,7 +6,7 @@ const MockUsersDatabase = require("./src/db/index.js");
 
 const PORT = 8080;
 
-const DB = new MockUsersDatabase();
+const db = new MockUsersDatabase();
 
 app.use(cors());
 
@@ -34,20 +34,20 @@ app.get("/pokemon/:pokemonName", async (req, res) => {
 
 app.get("/users", (req, res) => {
     console.log(`[GET /users]`)
-    res.status(200).json(DB.getUsers());
+    res.status(200).json(db.getUsers());
 })
 
 app.post("/users", (req, res) => {
     const { name, email } = req.body;
     console.log(`[POST /users]`)
-    DB.createUser(name,email);
+    db.createUser(name,email);
     res.status(200).json({message: `user ${name} created`})
 })
 
 app.get("/users/:id", (req, res) => {
     const userId = parseInt(req.params.id);
     console.log(`[GET /users/${userId}]`)
-    const targetUser = DB.getUserById(userId);
+    const targetUser = db.getUserById(userId);
 
     res.status(200).json(targetUser);
 
@@ -57,7 +57,7 @@ app.put("/users/:id", (req, res) => {
     const userId = parseInt(req.params.id);
     console.log(`[PUT /users/${userId}]`)
     const { email } = req.body;
-    const isUserFound = DB.updateEmailById(userId, email);
+    const isUserFound = db.updateEmailById(userId, email);
     
    if (isUserFound === true){
        res.status(200).json({message: `user ${email} changed`});
@@ -70,7 +70,7 @@ app.put("/users/:id", (req, res) => {
 app.delete("/users/:id", (req, res) => {
     const userId = parseInt(req.params.id);
     console.log(`[DELETE /users/${userId}`)
-    const isUserFound = DB.deleteUserById(userId); 
+    const isUserFound = db.deleteUserById(userId); 
     
     if (isUserFound === true){
         res.status(200).json({message: `user ${userId} deleted`});

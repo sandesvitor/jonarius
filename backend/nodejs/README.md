@@ -25,6 +25,30 @@ Request | URL | o que faz | comentários |
 `DEL`|http://localhost:8080/users/$numero|Exclui o usuário baseado na "id" dele|Caso a id não exista volta uma mensagem de erro|
 `GET`|http://localhost:8080/pokemon/$nomeDoPokemon|Busca o pokemon pelo nome e retorna informações sobre ele|Função extra inserida como estudo usando a https://pokeapi.co/|
 
+## GETTING STARTED
+
+# o que é necessário:
+nome |utilidade |
+--------------------|--------------------------------------------------------------------------------------|
+Node Packet Manager | Serve para gerenciar e instalar as bibliotecas, pacotes e dependências de terceiros. | 
+Axios| Encapsula e organiza a função 'FETCH' do Javascript|
+Cors | Protocolo de comunicação|
+Express | 
+
+```shell
+install npm 
+install axios
+install cors
+install express
+```
+código usado para função GET 
+```shell
+app.get("/users", (req, res) => {
+    console.log(`[GET /users]`)
+    res.status(200).json(db.getUsers());
+})
+```
+
 ## LIBRARIES USADAS
 
 express
